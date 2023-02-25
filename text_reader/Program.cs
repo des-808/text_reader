@@ -9,7 +9,7 @@ using static System.Console;
 using System.Globalization;
 using static System.String;
 using System.Net.NetworkInformation;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+//using static System.Runtime.InteropServices.JavaScript.JSType;
 
 ////////////////////////////////////////MAIN/////////////////////////////////////////////////
 
@@ -17,9 +17,9 @@ string filename = "C:\\Users\\des808\\source\\repos\\text_reader\\text_reader\\l
 int koll_vo = 1;
 int objekt = 100;
 Reader rider = new Reader();//= new (filename, koll_vo);
-Write("¬ведите колличество строк: ");koll_vo = Convert.ToInt32(ReadLine());rider.read_file(filename, koll_vo);
-//rider.read_file_str(filename, 688338);
-//rider.read_file_n_object(filename, objekt);  
+//Write("¬ведите колличество строк: ");koll_vo = Convert.ToInt32(ReadLine());rider.read_file(filename, koll_vo);
+//Write("¬ведите номер строки: "); koll_vo = Convert.ToInt32(ReadLine()); rider.read_file_str(filename, 688338);
+Write("¬ведите номер обьекта: "); objekt = Convert.ToInt32(ReadLine()); rider.read_file_n_object(filename, objekt);  
 //rider.read_all_file(filename);
 
 
