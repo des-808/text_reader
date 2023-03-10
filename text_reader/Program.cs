@@ -1,4 +1,4 @@
-// See https://aka.ms/new-console-template for more information
+п»ї// See https://aka.ms/new-console-template for more information
 
 using System.IO;
 using System.Linq;
@@ -17,9 +17,9 @@ string filename = "C:\\Users\\des808\\source\\repos\\text_reader\\text_reader\\l
 int koll_vo = 1;
 int objekt = 100;
 Reader rider = new Reader();//= new (filename, koll_vo);
-//Write("Введите колличество строк: ");koll_vo = Convert.ToInt32(ReadLine());rider.read_file(filename, koll_vo);
-//Write("Введите номер строки: "); koll_vo = Convert.ToInt32(ReadLine()); rider.read_file_str(filename, 688338);
-Write("Введите номер обьекта: "); objekt = Convert.ToInt32(ReadLine()); rider.read_file_n_object(filename, objekt);   
+//Write("Р’РІРµРґРёС‚Рµ РєРѕР»Р»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє: ");koll_vo = Convert.ToInt32(ReadLine());rider.read_file(filename, koll_vo);
+//Write("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЃС‚СЂРѕРєРё: "); koll_vo = Convert.ToInt32(ReadLine()); rider.read_file_str(filename, 688338);
+Write("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РѕР±СЊРµРєС‚Р°: "); objekt = Convert.ToInt32(ReadLine()); rider.read_file_n_object(filename, objekt);   
 //rider.read_all_file(filename);
 
 
@@ -74,10 +74,10 @@ public int parser(string str,long n_stroki)
         length_arr = arr_string.Length;
 
         /*
-         Console.ForegroundColor = ConsoleColor.DarkRed; // устанавливаем цвет
-        //Console.ResetColor(); // сбрасываем в стандартный
-        Console.WriteLine($"Строка №: {n_stroki}. Длинна строки: {length_arr}");
-        Console.ForegroundColor = ConsoleColor.Green; // устанавливаем цвет
+         Console.ForegroundColor = ConsoleColor.DarkRed; // СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј С†РІРµС‚
+        //Console.ResetColor(); // СЃР±СЂР°СЃС‹РІР°РµРј РІ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№
+        Console.WriteLine($"РЎС‚СЂРѕРєР° в„–: {n_stroki}. Р”Р»РёРЅРЅР° СЃС‚СЂРѕРєРё: {length_arr}");
+        Console.ForegroundColor = ConsoleColor.Green; // СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј С†РІРµС‚
         */
         
         this.date_d = Convert.ToInt32(arr_string[0]);
@@ -296,16 +296,16 @@ class Reader:Parser
         try
         {
             string? line;
-            /*//Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);//без этой строчки не работает
-            // var sr = new StreamReader(filename, Encoding.Default);// для чтения файла в ANSI-кодировке (Windows-1251 aka CP1251 в русскоязычной винде).
-            //var sr = new StreamReader(filename, Encoding.GetEncoding(1251));// для чтения файла в той же кодировке Windows-1251, любая винда.
-            //var sr = new StreamReader(filename, Encoding.GetEncoding(866));//для чтения файла в OEM-кодировке (DOS, CP-866), любая винда.*/
+            /*//Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);//Р±РµР· СЌС‚РѕР№ СЃС‚СЂРѕС‡РєРё РЅРµ СЂР°Р±РѕС‚Р°РµС‚
+            // var sr = new StreamReader(filename, Encoding.Default);// РґР»СЏ С‡С‚РµРЅРёСЏ С„Р°Р№Р»Р° РІ ANSI-РєРѕРґРёСЂРѕРІРєРµ (Windows-1251 aka CP1251 РІ СЂСѓСЃСЃРєРѕСЏР·С‹С‡РЅРѕР№ РІРёРЅРґРµ).
+            //var sr = new StreamReader(filename, Encoding.GetEncoding(1251));// РґР»СЏ С‡С‚РµРЅРёСЏ С„Р°Р№Р»Р° РІ С‚РѕР№ Р¶Рµ РєРѕРґРёСЂРѕРІРєРµ Windows-1251, Р»СЋР±Р°СЏ РІРёРЅРґР°.
+            //var sr = new StreamReader(filename, Encoding.GetEncoding(866));//РґР»СЏ С‡С‚РµРЅРёСЏ С„Р°Р№Р»Р° РІ OEM-РєРѕРґРёСЂРѕРІРєРµ (DOS, CP-866), Р»СЋР±Р°СЏ РІРёРЅРґР°.*/
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             StreamReader sr = new StreamReader(Path, Encoding.GetEncoding(1251));//StreamReader sr = new StreamReader(filename);
             int count = 0;
             /*//line = sr.ReadLine();
-            //while (line != null)//для чтения всего файла*/
-            while (count != tmp)//читаем какую-то часть строк в файле
+            //while (line != null)//РґР»СЏ С‡С‚РµРЅРёСЏ РІСЃРµРіРѕ С„Р°Р№Р»Р°*/
+            while (count != tmp)//С‡РёС‚Р°РµРј РєР°РєСѓСЋ-С‚Рѕ С‡Р°СЃС‚СЊ СЃС‚СЂРѕРє РІ С„Р°Р№Р»Рµ
             {
                 counter++;
                 line = sr.ReadLine();
@@ -326,7 +326,7 @@ class Reader:Parser
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             var sr = new StreamReader(Path, Encoding.GetEncoding(1251));//StreamReader sr = new StreamReader(filename);
             line = sr.ReadLine();
-            while (line != null)//для чтения всего файла
+            while (line != null)//РґР»СЏ С‡С‚РµРЅРёСЏ РІСЃРµРіРѕ С„Р°Р№Р»Р°
             {
                 counter++; 
                 if (counter == N_str) { 
@@ -338,11 +338,11 @@ class Reader:Parser
         }
         catch (Exception e)
         {
-            Console.ForegroundColor = ConsoleColor.DarkRed; Console.WriteLine($"Длинна строки: { length_arr} Exception:  + {e.Message}");
+            Console.ForegroundColor = ConsoleColor.DarkRed; Console.WriteLine($"Р”Р»РёРЅРЅР° СЃС‚СЂРѕРєРё: { length_arr} Exception:  + {e.Message}");
             Console.WriteLine($"tmp = {tmp}");
-            //Console.ForegroundColor = ConsoleColor.DarkRed; // устанавливаем цвет//Console.ResetColor(); // сбрасываем в стандартный
-            Console.WriteLine($"Строка №: {counter}. Длинна строки: {length_arr}");
-            Console.ForegroundColor = ConsoleColor.Green;// устанавливаем цвет
+            //Console.ForegroundColor = ConsoleColor.DarkRed; // СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј С†РІРµС‚//Console.ResetColor(); // СЃР±СЂР°СЃС‹РІР°РµРј РІ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№
+            Console.WriteLine($"РЎС‚СЂРѕРєР° в„–: {counter}. Р”Р»РёРЅРЅР° СЃС‚СЂРѕРєРё: {length_arr}");
+            Console.ForegroundColor = ConsoleColor.Green;// СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј С†РІРµС‚
         }
         finally { Console.WriteLine(); Console.WriteLine("Executing finally block."); }
     }
@@ -355,7 +355,7 @@ class Reader:Parser
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             var sr = new StreamReader(Path, Encoding.GetEncoding(1251));//StreamReader sr = new StreamReader(filename);
             line = sr.ReadLine();
-            while (line != null)//для чтения всего файла
+            while (line != null)//РґР»СЏ С‡С‚РµРЅРёСЏ РІСЃРµРіРѕ С„Р°Р№Р»Р°
             {
                 counter++;
                 int tmp = parser(line, counter);
@@ -368,9 +368,9 @@ class Reader:Parser
         catch (Exception e) { 
             Console.ForegroundColor = ConsoleColor.DarkRed;  Console.WriteLine("Exception: " + e.Message); 
             Console.WriteLine($"tmp = {tmp}");
-            //Console.ForegroundColor = ConsoleColor.DarkRed; // устанавливаем цвет//Console.ResetColor(); // сбрасываем в стандартный
-            Console.WriteLine($"Строка №: {counter}. Длинна строки: {length_arr}");
-            Console.ForegroundColor = ConsoleColor.Green;// устанавливаем цвет
+            //Console.ForegroundColor = ConsoleColor.DarkRed; // СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј С†РІРµС‚//Console.ResetColor(); // СЃР±СЂР°СЃС‹РІР°РµРј РІ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№
+            Console.WriteLine($"РЎС‚СЂРѕРєР° в„–: {counter}. Р”Р»РёРЅРЅР° СЃС‚СЂРѕРєРё: {length_arr}");
+            Console.ForegroundColor = ConsoleColor.Green;// СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј С†РІРµС‚
 
         }
         finally { Console.WriteLine(); Console.WriteLine("Executing finally block."); }
@@ -382,14 +382,14 @@ class Reader:Parser
         {
             string? line;
             List<string> logs = new List<string>();
-            /*//Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);//без этой строчки не работает 
-            // var sr = new StreamReader(filename, Encoding.Default);// для чтения файла в ANSI-кодировке (Windows-1251 aka CP1251 в русскоязычной винде).
-            //var sr = new StreamReader(filename, Encoding.GetEncoding(1251));// для чтения файла в той же кодировке Windows-1251, любая винда.
-            //var sr = new StreamReader(filename, Encoding.GetEncoding(866));//для чтения файла в OEM-кодировке (DOS, CP-866), любая винда.*/
+            /*//Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);//Р±РµР· СЌС‚РѕР№ СЃС‚СЂРѕС‡РєРё РЅРµ СЂР°Р±РѕС‚Р°РµС‚ 
+            // var sr = new StreamReader(filename, Encoding.Default);// РґР»СЏ С‡С‚РµРЅРёСЏ С„Р°Р№Р»Р° РІ ANSI-РєРѕРґРёСЂРѕРІРєРµ (Windows-1251 aka CP1251 РІ СЂСѓСЃСЃРєРѕСЏР·С‹С‡РЅРѕР№ РІРёРЅРґРµ).
+            //var sr = new StreamReader(filename, Encoding.GetEncoding(1251));// РґР»СЏ С‡С‚РµРЅРёСЏ С„Р°Р№Р»Р° РІ С‚РѕР№ Р¶Рµ РєРѕРґРёСЂРѕРІРєРµ Windows-1251, Р»СЋР±Р°СЏ РІРёРЅРґР°.
+            //var sr = new StreamReader(filename, Encoding.GetEncoding(866));//РґР»СЏ С‡С‚РµРЅРёСЏ С„Р°Р№Р»Р° РІ OEM-РєРѕРґРёСЂРѕРІРєРµ (DOS, CP-866), Р»СЋР±Р°СЏ РІРёРЅРґР°.*/
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             StreamReader sr = new StreamReader(Path, Encoding.GetEncoding(1251));//StreamReader sr = new StreamReader(filename);
             line = sr.ReadLine(); 
-            while (line != null)//для чтения всего файла
+            while (line != null)//РґР»СЏ С‡С‚РµРЅРёСЏ РІСЃРµРіРѕ С„Р°Р№Р»Р°
             {
                 //parser(line);
                 //Print();
