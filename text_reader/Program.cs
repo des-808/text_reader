@@ -20,7 +20,7 @@ Reader rider = new Reader();//= new (filename, koll_vo);
 //Write("Введите колличество строк: ");koll_vo = Convert.ToInt32(ReadLine());rider.read_file(filename, koll_vo);
 //Write("Введите номер строки: "); koll_vo = Convert.ToInt32(ReadLine()); rider.read_file_str(filename, 688338);
 Write("Введите номер обьекта: "); objekt = Convert.ToInt32(ReadLine()); rider.read_file_n_object(filename, objekt);   
-//rider.read_all_file(filename);
+//rider.read_all_file(filename); 
 
 
 ///////////////////////////////////////END_MAIN////////////////////////////////////////////// 
@@ -72,14 +72,12 @@ public int parser(string str,long n_stroki)
         WriteLine();
         */
         length_arr = arr_string.Length;
-
         /*
          Console.ForegroundColor = ConsoleColor.DarkRed; // устанавливаем цвет
         //Console.ResetColor(); // сбрасываем в стандартный
         Console.WriteLine($"Строка №: {n_stroki}. Длинна строки: {length_arr}");
         Console.ForegroundColor = ConsoleColor.Green; // устанавливаем цвет
         */
-        
         this.date_d = Convert.ToInt32(arr_string[0]);
         this.date_m = Convert.ToInt32(arr_string[1]);
         this.date_g = Convert.ToInt32(arr_string[2]);
